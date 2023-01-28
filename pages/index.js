@@ -160,7 +160,7 @@ const Home = () => {
         <br /><br />
         I also love producing music.
       </p>
-      <div className={styles.faceImg} style={{content:`url("/face-outline.png")`}}></div>
+      <div className={styles.faceImg} style={{content:`url("face-outline.png")`}}></div>
     </div>
   </div>
 </section>
