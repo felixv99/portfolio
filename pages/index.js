@@ -176,7 +176,7 @@ const Home = () => {
         </div>
       </div>
       <div className={styles.projectBox}>
-        <div className={convertToNextClassName("projectImg boxStyle")} style={{ background: `url("/thumb-2.jpg") center center/cover`}} onClick={() => overlayContentHandler(2)}></div>
+        <div className={convertToNextClassName("projectImg boxStyle")} style={{ background: `url("./thumb-2.jpg") center center/cover`}} onClick={() => overlayContentHandler(2)}></div>
         <div className={styles.flexr}>
           <p className={styles.text1x} style={{textAlign: "left"}}>Synthesizer</p>
           <p className={convertToNextClassName("text1x textlight")} style={{textAlign: "right"}}>Python dev</p>
