@@ -88,7 +88,7 @@ const Home = () => {
         <title>Felix Virtanen</title>
         <meta name="description" content="Portfolio" />
         {/*<meta name="viewport" content="width=device-width, initial-scale=1" />*/}
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="./favicon.ico" />
       </Head>
       <main>
       <div className={convertToNextClassName("overlay flexc")} style={overlayVisibility}>
@@ -160,7 +160,7 @@ const Home = () => {
         <br /><br />
         I also love producing music.
       </p>
-      <div className={styles.faceImg} style={{content:`url("./images/face-outline.png")`}}></div>
+      <div className={styles.faceImg} style={{content:`url("./face-outline.png")`}}></div>
     </div>
   </div>
 </section>
@@ -169,7 +169,7 @@ const Home = () => {
     <div className={styles.customHeader} style={{marginLeft: "180px"}}>Projects</div>
     <div className={convertToNextClassName("projectsContainer flexr")}>
       <div className={styles.projectBox}>
-        <div className={convertToNextClassName("projectImg boxStyle")} style={{ background: `url("/thumb-1.jpg") center center/cover`}} onClick={() => overlayContentHandler(1)}></div>
+        <div className={convertToNextClassName("projectImg boxStyle")} style={{ background: `url("./thumb-1.jpg") center center/cover`}} onClick={() => overlayContentHandler(1)}></div>
         <div className={styles.flexr}>
           <p className={styles.text1x} style={{textAlign: "left"}}>Weather App</p>
           <p className={convertToNextClassName("text1x textlight")} style={{textAlign: "right"}}>Web dev</p>
@@ -183,7 +183,7 @@ const Home = () => {
         </div>
       </div>
       <div className={styles.projectBox}>
-        <div className={convertToNextClassName("projectImg boxStyle")} style={{ background: `url("/thumb-3.jpg") center center/cover`}} onClick={() => overlayContentHandler(3)}></div>
+        <div className={convertToNextClassName("projectImg boxStyle")} style={{ background: `url("./thumb-3.jpg") center center/cover`}} onClick={() => overlayContentHandler(3)}></div>
         <div className={styles.flexr}>
           <p className={styles.text1x} style={{textAlign: "left"}}>Tree App</p>
           <p className={convertToNextClassName("text1x textlight")} style={{textAlign: "right"}}>UI/UX</p>
@@ -192,7 +192,7 @@ const Home = () => {
     </div>
   </div>
   <div className={convertToNextClassName("footer flexr")}><p>More about the development can be found from my <a href="https://github.com/felixv99" target="_blank" rel="noreferrer">Github</a></p>
-  <a href="https://github.com/felixv99" style={{backgroundImage:`url("/github-logo.svg")`, width: "50px", height: "49px"}}></a>
+  <a href="https://github.com/felixv99" style={{backgroundImage:`url("./github-logo.svg")`, width: "50px", height: "49px"}}></a>
     
   </div>
 </section>
@@ -203,8 +203,8 @@ const Home = () => {
   </div>
    <div className={convertToNextClassName("footer flexc")}>
    <div className={styles.flexr} style={{gap: "30px"}}>
-      <a href="https://linkedin.com/in/felixv1/" style={{backgroundImage:`url("/linkedin-logo.svg")`, width: "40px", height: "42px"}}></a>
-      <a href="https://github.com/felixv99" style={{backgroundImage:`url("/github-logo.svg")`, width: "50px", height: "49px"}}></a>
+      <a href="https://linkedin.com/in/felixv1/" style={{backgroundImage:`url("./linkedin-logo.svg")`, width: "40px", height: "42px"}}></a>
+      <a href="https://github.com/felixv99" style={{backgroundImage:`url("./github-logo.svg")`, width: "50px", height: "49px"}}></a>
    </div>
     Designed and developed by Felix Virtanen
   </div>
