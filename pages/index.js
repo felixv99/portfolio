@@ -167,7 +167,7 @@ const Home = () => {
 </section>
 <section id="projects" className={styles.flexc} style={{position: "relative"}}>
   <div className={convertToNextClassName("container flexc")} style={{maxWidth: "1000px", paddingTop: "80px", paddingBottom: "170px"}}>
-    <div className={styles.customHeader} style={{marginLeft: "180px"}}>Projects</div>
+    <div className={styles.customHeader} style={{marginLeft: "80px"}}>Projects</div>
     <div className={convertToNextClassName("projectsContainer flexr")}>
       <div className={styles.projectBox}>
         <div className={convertToNextClassName("projectImg boxStyle")} style={{ background: `url("./thumb-1.jpg") center center/cover`}} onClick={() => overlayContentHandler(1)}></div>
