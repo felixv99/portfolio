@@ -23,7 +23,7 @@ const Home = () => {
           sections.forEach(current => {
             const sectionHeight = current.offsetHeight;
             const sectionTop = current.offsetTop - 50;
-            const sectionId = current.getAttribute("id");
+            const sectionId = current.getAttribute("id")
             if ( scroll_pos > sectionTop && scroll_pos <= sectionTop + sectionHeight) {
               //console.log(sectionId)
               setSitePositions( prev => ({...prev, [sectionId]: "highlight"}))
@@ -33,11 +33,11 @@ const Home = () => {
           }
           )
         };
-        window.removeEventListener('scroll', onScroll);
-        window.addEventListener('scroll', onScroll, { passive: true });
-        return () => window.removeEventListener('scroll', onScroll);
+        window.removeEventListener('scroll', onScroll)
+        window.addEventListener('scroll', onScroll, { passive: true })
+        return () => window.removeEventListener('scroll', onScroll)
     }, []);
-
+    
     useEffect(() => {
         const updateSize = () => {
           var width = window.innerWidth;
@@ -47,12 +47,13 @@ const Home = () => {
             setSmallMenu(false)
           }
         };
-        window.removeEventListener('resize', updateSize);
-        window.addEventListener('resize', updateSize, { passive: true });
-        return () => window.removeEventListener('resize', updateSize);
-    }, []);
-
-
+        updateSize()
+        window.removeEventListener("resize", updateSize)
+        window.addEventListener("resize", updateSize, { passive: true })
+        return () => {
+          window.removeEventListener("resize", updateSize)
+        }
+    }, [])
 
   const overlayVisibility = { display: visible ? 'flex' : 'none'}
   const smallMenuStyle = { display: smallMenuOpen ? 'flex' : 'none'}
@@ -150,10 +151,10 @@ const Home = () => {
   </div>
 </section>
 <section id="about" className={styles.flexc}>
-  <div className={convertToNextClassName("container flexc")}>
+  <div className={convertToNextClassName("container flexc")} style={{maxWidth: "1000px", paddingTop: "80px", paddingBottom: "50px"}}>
     <div className={styles.customHeader}>About me</div>
-    <div className={styles.flexr}>
-      <p className={styles.text1x} >
+    <div className={convertToNextClassName("flexr aboutme")}>
+      <p className={styles.text1x} style={{width: "52%", marginBottom: "10px"}}>
         I have recently completed a Bachelor Of Science, majoring in Electrical engineering at Aalto University. My Bachelor&apos;s computer science minor led me to start Master of Science degree, majoring  in Human-Computer Interaction.
         <br /><br />
         I am especially interested in the technological implementation of interactive systems.
