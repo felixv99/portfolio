@@ -56,6 +56,8 @@ const Home = () => {
     }, [])
 
   const overlayVisibility = { display: visible ? 'flex' : 'none'}
+  //const mainScroll = { overflow: hidden ? '' : 'none'}
+
   const smallMenuStyle = { display: smallMenuOpen ? 'flex' : 'none'}
   const navButtonStyle = { display: smallMenuOpen ? 'none' : 'flex'}
 
@@ -75,7 +77,13 @@ const Home = () => {
     } else if(id === 3) {
       var infoText = "Tree planting App was a course project for User Interface construction course. Together with our team we designed an UI, that serves as a medium between donators and tree planters, giving donators involving experience throughout the planting cycle."
       setInfoTabData({title: "Tree planting App UI", text: infoText, imgPath: imgPath})
-    }
+    } else if(id === 4) {
+      var infoText = "Give-A-Waste was a startup project that me and my group made for Startup Experience course. Give-A-Waste would have been an application that motivates users to recycle. I had my hands on variety of parts of building the project from interviewing people to creating a simple prototype and of course creating the UI/UX design."
+      setInfoTabData({title: "Give-A-Waste", text: infoText, imgPath: imgPath})
+    } else if(id === 5) {
+      var infoText = "PlacesXY is a work-in-progress mobile application for saving your memories to a map. The application is made with React Native and it uses Expo Go as its main framework. The App utilizes Google cloud by using Google Maps API and Google Cloud storage."
+      setInfoTabData({title: "PlacesXY", text: infoText, imgPath: imgPath})
+    } 
     setVisible(!visible)
   }
 
@@ -93,23 +101,23 @@ const Home = () => {
       </Head>
       <main>
       <div className={convertToNextClassName("overlay flexc")} style={overlayVisibility}>
-  <div className={styles.overlayMask} onClick={toggleOverlay}></div>
-    <div className={convertToNextClassName("projectInfoTab flexc boxStyle")}>
-      <div className={styles.projectInfoTabImg} style={{content: infoTabData.imgPath}}></div>
-      <div className={convertToNextClassName("text1p3x underline")}>{infoTabData.title}</div>
-      <div className={styles.projectInfoTabText}>
-       {infoTabData.text}
-      </div>
-      <div className={styles.flexr} style={{alignItems: "center", marginBottom: "30px", marginTop: "10px", justifyContent: "space-between"}}>
-      { infoTabData.title === "Weather App" ?
-        <a className={styles.viewButton} href="https://weather-sun-cloud-rain.fly.dev/" target="_blank" rel="noreferrer">View site</a> : <div className={styles.viewButton} style={{opacity: 0, pointerEvents: "none"}}>View site</div> }
-        <div id={styles.xButton} className={styles.xInfo} onClick={toggleOverlay}>
-          <div className={styles.x1}></div>
-          <div className={styles.x2}></div>
+        <div className={styles.overlayMask} onClick={toggleOverlay}></div>
+        <div className={convertToNextClassName("projectInfoTab flexc boxStyle")}>
+          <div className={styles.projectInfoTabImg} style={{content: infoTabData.imgPath}}></div>
+          <div className={convertToNextClassName("text1p3x underline")}>{infoTabData.title}</div>
+          <div className={styles.projectInfoTabText}>
+          {infoTabData.text}
+          </div>
+          <div className={styles.flexr} style={{alignItems: "center", marginBottom: "30px", marginTop: "10px", justifyContent: "space-between"}}>
+          { infoTabData.title === "Weather App" ?
+            <a className={styles.viewButton} href="https://weather-sun-cloud-rain.fly.dev/" target="_blank" rel="noreferrer">View site</a> : <div className={styles.viewButton} style={{opacity: 0, pointerEvents: "none"}}>View site</div> }
+            <div id={styles.xButton} className={styles.xInfo} onClick={toggleOverlay}>
+              <div className={styles.x1}></div>
+              <div className={styles.x2}></div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-</div>
 { smallMenu === true ? 
 <>
   <div className={convertToNextClassName("navButton flexc fixed")} onClick={toggleSmallMenu} style={navButtonStyle}>
@@ -169,6 +177,13 @@ const Home = () => {
   <div className={convertToNextClassName("container flexc")} style={{maxWidth: "1000px", paddingTop: "80px", paddingBottom: "170px"}}>
     <div className={styles.customHeader} style={{marginLeft: "80px"}}>Projects</div>
     <div className={convertToNextClassName("projectsContainer flexr")}>
+    <div className={styles.projectBox}>
+        <div className={convertToNextClassName("projectImg boxStyle")} style={{ background: `url("./thumb-5.jpg") center center/cover`}} onClick={() => overlayContentHandler(5)}></div>
+        <div className={styles.flexr}>
+          <p className={styles.text1x} style={{textAlign: "left"}}>PlacesXY (W.I.P)</p>
+          <p className={convertToNextClassName("text1x textlight")} style={{textAlign: "right"}}>Mobile dev</p>
+        </div>
+      </div>
       <div className={styles.projectBox}>
         <div className={convertToNextClassName("projectImg boxStyle")} style={{ background: `url("./thumb-1.jpg") center center/cover`}} onClick={() => overlayContentHandler(1)}></div>
         <div className={styles.flexr}>
@@ -181,6 +196,13 @@ const Home = () => {
         <div className={styles.flexr}>
           <p className={styles.text1x} style={{textAlign: "left"}}>Synthesizer</p>
           <p className={convertToNextClassName("text1x textlight")} style={{textAlign: "right"}}>Python dev</p>
+        </div>
+      </div>
+      <div className={styles.projectBox}>
+        <div className={convertToNextClassName("projectImg boxStyle")} style={{ background: `url("./thumb-4.jpg") center center/cover`}} onClick={() => overlayContentHandler(4)}></div>
+        <div className={styles.flexr}>
+          <p className={styles.text1x} style={{textAlign: "left"}}>Give-A-Waste</p>
+          <p className={convertToNextClassName("text1x textlight")} style={{textAlign: "right"}}>UI/UX</p>
         </div>
       </div>
       <div className={styles.projectBox}>
