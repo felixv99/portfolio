@@ -6,7 +6,7 @@ const nextConfig = {
     unoptimized: true
   },
    /*assetPrefix: isProd ? "/portfolio/" : "",*/
-  basePath: '/portfolio'
+  basePath: '/portfolio' //comment out basepath when testing in localhost
 }
 
 module.exports = nextConfig

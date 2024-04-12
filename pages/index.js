@@ -67,7 +67,7 @@ const Home = () => {
   }
 
   const overlayContentHandler = (id) => {
-    const imgPath = `url("/thumb-${id}.jpg")`
+    const imgPath = id === 6 ? `url("/thumb-${id}.png")` : `url("/thumb-${id}.jpg")`
     if(id === 1) {
       var infoText = "Weather App is an application that shows real time weather data for almost any city on earth. User account can be made to save your favourite cities."
       setInfoTabData({title: "Weather App", text: infoText, imgPath: imgPath})
@@ -82,6 +82,9 @@ const Home = () => {
       setInfoTabData({title: "Give-A-Waste", text: infoText, imgPath: imgPath})
     } else if(id === 5) {
       var infoText = "PlacesXY is a work-in-progress mobile application for saving your memories to a map. The application is made with React Native and it uses Expo Go as its main framework. The App utilizes Google cloud by using Google Maps API and Google Cloud storage."
+      setInfoTabData({title: "Musa", text: infoText, imgPath: imgPath})
+    } else if(id === 6) {
+      var infoText = "Musa is the future of music gear recommerce. I hope to launch the mvp in June 2024. This project is the biggest project I have worked on so far. It has given me alot of insights topics like data modeling, architecture, ux/ui, front-end and back-end with modern technologies using server-side rendering. The project also includes a modern cms."
       setInfoTabData({title: "PlacesXY", text: infoText, imgPath: imgPath})
     } 
     setVisible(!visible)
@@ -177,6 +180,13 @@ const Home = () => {
   <div className={convertToNextClassName("container flexc")} style={{maxWidth: "1000px", paddingTop: "80px", paddingBottom: "170px"}}>
     <div className={styles.customHeader} style={{marginLeft: "80px"}}>Projects</div>
     <div className={convertToNextClassName("projectsContainer flexr")}>
+    <div className={styles.projectBox}>
+        <div className={convertToNextClassName("projectImg boxStyle")} style={{ background: `url("./thumb-6.png") center center/cover`}} onClick={() => overlayContentHandler(6)}></div>
+        <div className={styles.flexr}>
+          <p className={styles.text1x} style={{textAlign: "left"}}>Musa - <span style={{lineHeight: "1ch", fontSize: "0.6em"}}>Coming soon</span></p>
+          <p className={convertToNextClassName("text1x textlight")} style={{textAlign: "right"}}>Web dev</p>
+        </div>
+    </div>
     <div className={styles.projectBox}>
         <div className={convertToNextClassName("projectImg boxStyle")} style={{ background: `url("./thumb-5.jpg") center center/cover`}} onClick={() => overlayContentHandler(5)}></div>
         <div className={styles.flexr}>
