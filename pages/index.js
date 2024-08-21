@@ -84,7 +84,7 @@ const Home = () => {
       var infoText = "PlacesXY is a work-in-progress mobile application for saving your memories to a map. The application is made with React Native and it uses Expo Go as its main framework. The App utilizes Google cloud by using Google Maps API and Google Cloud storage."
       setInfoTabData({title: "PlacesXY", text: infoText, imgPath: imgPath})
     } else if(id === 6) {
-      var infoText = "Musa is the future of music gear recommerce. I hope to launch the mvp in June 2024. This project is the biggest project I have worked on so far. It has given me alot of insights topics like data modeling, architecture, ux/ui, front-end and back-end with modern technologies using server-side rendering. The project also includes a modern cms."
+      var infoText = "Musa is the future of music gear recommerce. This project is the biggest project I have worked on so far. It has given me alot of insights topics like data modeling, architecture, ux/ui, front-end and back-end with modern technologies using server-side rendering. The project also includes a modern cms."
       setInfoTabData({title: "Musa", text: infoText, imgPath: imgPath})
     } 
     setVisible(!visible)
